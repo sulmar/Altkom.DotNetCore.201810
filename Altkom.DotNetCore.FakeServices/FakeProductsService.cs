@@ -30,5 +30,16 @@ namespace Altkom.DotNetCore.FakeServices
         {
             return products.SingleOrDefault(p => p.Id == id);
         }
+
+        public void Remove(int id)
+        {
+            Product product = Get(id);
+            products.Remove(product);
+        }
+
+        public void Update(Product entity)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

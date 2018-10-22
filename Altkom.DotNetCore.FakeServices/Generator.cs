@@ -18,4 +18,18 @@ namespace Altkom.DotNetCore.FakeServices
 
         public IList<Product> GetProducts(int count) => FakerProducts.Generate(count);
     }
+
+    class CustomerGenerator
+    {
+        public Faker<Customer> FakerCustomers => new Faker<Customer>()
+            .StrictMode(true)
+            .RuleFor(p => p.Id, f => f.IndexFaker)
+            .RuleFor(p => p.FirstName, f => f.Person.FirstName)
+            .RuleFor(p => p.LastName, f => f.Person.LastName)
+            .FinishWith((f, c) => Debug.WriteLine($"Customer {c.FirstName} {c.LastName} was generated."));
+
+
+        public IList<Customer> GetCustomers(int count) => FakerCustomers.Generate(count);
+
+    }
 }

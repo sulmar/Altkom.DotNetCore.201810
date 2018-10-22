@@ -28,6 +28,7 @@ namespace Altkom.DotNetCore.Service
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IProductsService, FakeProductsService>();
+            services.AddSingleton<ICustomersService, FakeCustomersService>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

@@ -1,12 +1,21 @@
 ﻿using Altkom.DotNetCore.Models;
 using System;
-using System.Collections.Generic;
 
 namespace Altkom.DotNetCore.IServices
 {
-    public interface IProductsService
+    //public interface IProductsService
+    //{
+    //    IList<Product> Get();
+    //    Product Get(int id);
+    //}
+
+    public interface IProductsService : IEntitiesService<Product>
     {
-        IList<Product> Get();
-        Product Get(int id);
+
     }
+
+    public interface ICustomersService : IEntitiesService<Customer>
+    {
+    }
+
 }

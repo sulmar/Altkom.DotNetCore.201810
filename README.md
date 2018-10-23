@@ -22,10 +22,13 @@ dotnet test
 
 ## Entity Framework
 
-~~~
+* Instalacja Entity Framework
+
+
+~~~ powershell
 Install-Package Microsoft.EntityFrameworkCore
 ~~~
 
-~~~
+~~~ bash
 dotnet add package
 ~~~

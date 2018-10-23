@@ -17,6 +17,7 @@ namespace Altkom.DotNetCore.DbServices.Configurations
               .IsRequired()
               .HasMaxLength(100);
 
+            // Install-Package Microsoft.EntityFrameworkCore.Relational
             builder
               .Property(p => p.UnitPrice)
               .HasColumnType("decimal(10,2)");

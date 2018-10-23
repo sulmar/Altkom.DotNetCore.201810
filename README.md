@@ -25,3 +25,7 @@ dotnet test
 ~~~
 Install-Package Microsoft.EntityFrameworkCore
 ~~~
+
+~~~
+dotnet add package
+~~~

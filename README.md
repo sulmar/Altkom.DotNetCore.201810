@@ -1,11 +1,25 @@
 # Altkom.DotNetCore.201810
 
+## Polecenia z linii polecen
 
 * Utworzenie nowej aplikacji konsolowej
 
 ~~~ bash
 dotnet new console
 ~~~~
+
+* Utworzenie nowej aplikacji webapi
+
+~~~ bash
+dotnet new webapi
+~~~~
+
+* Utworzenie nowej aplikacji MVC
+
+~~~ bash
+dotnet new mvc
+~~~~
+
 
 
 * Uruchomienie aplikacji

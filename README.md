@@ -20,6 +20,11 @@ dotnet helloworld.dll
 dotnet test
 ~~~
 
+* Dodanie pakietu 
+~~~ bash
+dotnet add package <nazwa>
+~~~
+
 ## Entity Framework
 
 * Instalacja Entity Framework
@@ -29,11 +34,17 @@ dotnet test
 Install-Package Microsoft.EntityFrameworkCore
 ~~~
 
-~~~ bash
-dotnet add package
-~~~
+
 
 * Pobranie **connection string** z pliku konfiguracyjnego *appsettings.json*
+
+~~~ json
+ "ConnectionStrings": {
+    "MyConnection":  "Data Source=(localdb)\\MSSQLLocalDb;Initial Catalog=MyDb;Integrated Security=true"
+  }
+  
+  ~~~~
+  
  ~~~ csharp
  string connectionString = Configuration.GetConnectionString("MyConnection");
  ~~~

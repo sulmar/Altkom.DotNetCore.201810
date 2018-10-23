@@ -33,6 +33,18 @@ Install-Package Microsoft.EntityFrameworkCore
 dotnet add package
 ~~~
 
+
+* Instalacja obsługi bazy danych SQL Server
+~~~ powershell
+Install-Package Microsoft.EntityFrameworkCore.SqlServer
+~~~
+
+Dzięki temu możemy użyć metodę **UseSqlServer**
+~~~ csharp
+services.AddDbContext<MyContext>(options =>
+                            options.UseSqlServer(connectionString));
+~~~
+
 * Instalacja obsługi relacyjnej bazy danych, np. dodanie metodę HasColumnType
 ~~~ powershell
 Install-Package Microsoft.EntityFrameworkCore.Relational

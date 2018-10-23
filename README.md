@@ -19,3 +19,9 @@ dotnet helloworld.dll
 ~~~
 dotnet test
 ~~~
+
+## Entity Framework
+
+~~~
+Install-Package Microsoft.EntityFrameworkCore
+~~~

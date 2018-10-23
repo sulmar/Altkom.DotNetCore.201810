@@ -33,6 +33,10 @@ Install-Package Microsoft.EntityFrameworkCore
 dotnet add package
 ~~~
 
+* Pobranie **connection string** z pliku konfiguracyjnego *appsettings.json*
+ ~~~ csharp
+ string connectionString = Configuration.GetConnectionString("MyConnection");
+ ~~~
 
 * Instalacja obsługi bazy danych SQL Server
 ~~~ powershell

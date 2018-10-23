@@ -9,8 +9,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Altkom.DotNetCore.FakeGenerator\Altkom.DotNetCore.FakeGenerator.csproj" />
-    <ProjectReference Include="..\Altkom.DotNetCore.IServices\Altkom.DotNetCore.IServices.csproj" />
     <ProjectReference Include="..\Altkom.DotNetCore.Models\Altkom.DotNetCore.Models.csproj" />
   </ItemGroup>
 

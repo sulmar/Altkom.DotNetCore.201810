@@ -1,4 +1,5 @@
 ﻿using Altkom.DotNetCore.IServices;
+using Altkom.DotNetCore.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -31,10 +32,58 @@ namespace Altkom.DotNetCore.Service.Controllers
         {
             var product = productsService.Get(id);
 
+            if (product == null)
+                return NotFound();
+
             return Ok(product);
         }
 
+        [HttpPost]
+        public ActionResult Post(Product product)
+        {
+            productsService.Add(product);
 
-       
+            // zła praktyka
+            // return Created($"http://localhost:5000/api/products/{product.Id}", product);
+
+            return CreatedAtRoute(new { id = product.Id }, product);
+        }
+
+        [HttpDelete("{id}")]
+        public ActionResult Delete(int id)
+        {
+            productsService.Remove(id);
+
+            return Ok();
+        }
+
+        [HttpPut("{id}")]
+        public ActionResult Put(int id, Product product)
+        {
+            if (id != product.Id)
+                return BadRequest();
+
+            productsService.Update(product);
+
+            return Ok();
+        }
+
+
+        [HttpHead("{id}")]
+        public ActionResult Head(int id)
+        {
+            var product = productsService.Get(id);
+
+            if (product != null)
+                return Ok();
+            else
+                return NotFound();
+        }
+
+
+
+
+
+
     }
 }

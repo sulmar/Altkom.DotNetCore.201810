@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Altkom.DotNetCore.DbServices;
 using Altkom.DotNetCore.FakeServices;
 using Altkom.DotNetCore.IServices;
 using Microsoft.AspNetCore.Builder;
@@ -12,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Microsoft.EntityFrameworkCore;
 
 namespace Altkom.DotNetCore.Service
 {
@@ -27,8 +29,14 @@ namespace Altkom.DotNetCore.Service
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<IProductsService, FakeProductsService>();
-            services.AddSingleton<ICustomersService, FakeCustomersService>();
+            string connectionString = Configuration.GetConnectionString("MyConnection");
+
+            // Install-Package Microsoft.EntityFrameworkCore.SqlServer
+            services.AddDbContext<MyContext>(options =>
+                            options.UseSqlServer(connectionString));
+
+            services.AddScoped<IProductsService, DbProductsService>();
+            services.AddScoped<ICustomersService, DbCustomersService>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

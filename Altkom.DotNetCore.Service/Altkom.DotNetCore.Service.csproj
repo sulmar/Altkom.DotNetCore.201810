@@ -11,9 +11,11 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.4" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Altkom.DotNetCore.DbServices\Altkom.DotNetCore.DbServices.csproj" />
     <ProjectReference Include="..\Altkom.DotNetCore.FakeServices\Altkom.DotNetCore.FakeServices.csproj" />
     <ProjectReference Include="..\Altkom.DotNetCore.IServices\Altkom.DotNetCore.IServices.csproj" />
   </ItemGroup>

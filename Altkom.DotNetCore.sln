@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.DotNetCore.UnitTests
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.DotNetCore.Service", "Altkom.DotNetCore.Service\Altkom.DotNetCore.Service.csproj", "{91EE0350-814A-4E9A-8119-66B3AEB50B07}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.DotNetCore.DbServices", "Altkom.DotNetCore.DbServices\Altkom.DotNetCore.DbServices.csproj", "{57DA53FF-5CA7-470A-BB40-303DE38CD0D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.DotNetCore.FakeGenerator", "Altkom.DotNetCore.FakeGenerator\Altkom.DotNetCore.FakeGenerator.csproj", "{12489BA2-635F-40B3-AB6C-A6D0C0DD547E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{91EE0350-814A-4E9A-8119-66B3AEB50B07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91EE0350-814A-4E9A-8119-66B3AEB50B07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91EE0350-814A-4E9A-8119-66B3AEB50B07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57DA53FF-5CA7-470A-BB40-303DE38CD0D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57DA53FF-5CA7-470A-BB40-303DE38CD0D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57DA53FF-5CA7-470A-BB40-303DE38CD0D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57DA53FF-5CA7-470A-BB40-303DE38CD0D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12489BA2-635F-40B3-AB6C-A6D0C0DD547E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12489BA2-635F-40B3-AB6C-A6D0C0DD547E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12489BA2-635F-40B3-AB6C-A6D0C0DD547E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12489BA2-635F-40B3-AB6C-A6D0C0DD547E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -86,3 +86,9 @@ builder
               .HasColumnType("decimal(10,2)");
 			  
 ~~~
+
+
+## Narzędzia
+
+* Ngrok - umożliwia wystawienie własnej usługi pod adresem publicznym
+https://ngrok.com/

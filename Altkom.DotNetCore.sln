@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Altkom.DotNetCore.DbService
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Altkom.DotNetCore.FakeGenerator", "Altkom.DotNetCore.FakeGenerator\Altkom.DotNetCore.FakeGenerator.csproj", "{12489BA2-635F-40B3-AB6C-A6D0C0DD547E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.DotNetCore.ConsoleClient", "Altkom.DotNetCore.201810.ConsoleClient\Altkom.DotNetCore.ConsoleClient.csproj", "{004D16B6-33CC-43A5-9033-4EBD29C86B2A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.DotNetCore.ConsoleClient", "Altkom.DotNetCore.ConsoleClient\Altkom.DotNetCore.ConsoleClient.csproj", "{004D16B6-33CC-43A5-9033-4EBD29C86B2A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.DotNetCore.WinFormsClient", "Altkom.DotNetCore.WinFormsClient\Altkom.DotNetCore.WinFormsClient.csproj", "{DADF624F-31D3-4250-BCE4-44A0CB5780FA}"
 EndProject

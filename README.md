@@ -87,6 +87,116 @@ builder
 			  
 ~~~
 
+## Migracje
+
+1. Instalacja narzędzi do Visual Studio 
+~~~ Powershell
+PM> Install-Package Microsoft.EntityFrameworkCore.Tools
+~~~
+
+2. Utwórz klasę
+
+~~~ csharp
+ public class MyContextFactory : IDesignTimeDbContextFactory<MyContext>
+    {
+        public MyContext CreateDbContext(string[] args)
+        {
+            IConfigurationRoot configuration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json")
+                .Build();
+
+            var optionsBuilder = new DbContextOptionsBuilder<MyContext>();
+
+            optionsBuilder.UseSqlServer(configuration.GetConnectionString("MyConnection"));
+
+            return new MyContext(optionsBuilder.Options);
+        }
+    }
+~~~
+
+### Utworzenie bazy danych
+
+PowerShell
+~~~ Powershell
+Add-Migration InitialCreate
+~~~
+
+Konsola
+~~~ bash
+dotnet ef migrations add InitialCreate
+~~~
+
+### Zastosowanie migracji do utworzenie bazy danych
+
+PowerShell
+~~~ Powershell
+Update-Database
+~~~
+
+Konsola
+~~~ bash
+dotnet ef database update
+~~~
+
+
+
+### Dodanie migracji
+
+PowerShell
+~~~ Powershell
+Add-Migration AddCustomerCity
+~~~
+
+Konsola
+~~~ bash
+dotnet ef migrations add AddCustomerCity
+~~~
+
+
+4. Zastosuj migrację
+~~~ Powershell
+Update-Database
+~~~
+
+### Usuwanie migracji
+
+PowerShell
+~~~ Powershell
+Remove-Migration
+~~~
+
+Konsola
+~~~ bash
+dotnet ef migrations remove
+~~~
+
+
+### Powracanie do migracji
+
+PowerShell
+~~~ Powershell
+Update-Database LastGoodMigration
+~~~
+
+Konsola
+~~~ bash
+dotnet ef database update LastGoodMigration
+~~~
+
+
+
+### Generowanie skryptu SQL
+PowerShell
+~~~ Powershell
+Script-Migration
+~~~
+
+Konsola
+~~~ basg
+dotnet ef migrations script
+~~~
+
 
 ## Narzędzia
 

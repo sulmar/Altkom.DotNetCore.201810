@@ -3,19 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.DotNetCore.Models", "Altkom.DotNetCore.Models\Altkom.DotNetCore.Models.csproj", "{CCEDBDFB-24F7-40EC-82FB-AB022FDC6D6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Altkom.DotNetCore.Models", "Altkom.DotNetCore.Models\Altkom.DotNetCore.Models.csproj", "{CCEDBDFB-24F7-40EC-82FB-AB022FDC6D6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.DotNetCore.IServices", "Altkom.DotNetCore.IServices\Altkom.DotNetCore.IServices.csproj", "{083246A2-905B-479D-8334-6C04247D5880}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Altkom.DotNetCore.IServices", "Altkom.DotNetCore.IServices\Altkom.DotNetCore.IServices.csproj", "{083246A2-905B-479D-8334-6C04247D5880}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.DotNetCore.FakeServices", "Altkom.DotNetCore.FakeServices\Altkom.DotNetCore.FakeServices.csproj", "{974E9F02-0C87-49FA-9DC3-5846A90CF80E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Altkom.DotNetCore.FakeServices", "Altkom.DotNetCore.FakeServices\Altkom.DotNetCore.FakeServices.csproj", "{974E9F02-0C87-49FA-9DC3-5846A90CF80E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.DotNetCore.UnitTests", "Altkom.DotNetCore.UnitTests\Altkom.DotNetCore.UnitTests.csproj", "{EC25521C-824C-4C41-8A57-70243D2DFBC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Altkom.DotNetCore.UnitTests", "Altkom.DotNetCore.UnitTests\Altkom.DotNetCore.UnitTests.csproj", "{EC25521C-824C-4C41-8A57-70243D2DFBC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.DotNetCore.Service", "Altkom.DotNetCore.Service\Altkom.DotNetCore.Service.csproj", "{91EE0350-814A-4E9A-8119-66B3AEB50B07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Altkom.DotNetCore.Service", "Altkom.DotNetCore.Service\Altkom.DotNetCore.Service.csproj", "{91EE0350-814A-4E9A-8119-66B3AEB50B07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.DotNetCore.DbServices", "Altkom.DotNetCore.DbServices\Altkom.DotNetCore.DbServices.csproj", "{57DA53FF-5CA7-470A-BB40-303DE38CD0D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Altkom.DotNetCore.DbServices", "Altkom.DotNetCore.DbServices\Altkom.DotNetCore.DbServices.csproj", "{57DA53FF-5CA7-470A-BB40-303DE38CD0D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.DotNetCore.FakeGenerator", "Altkom.DotNetCore.FakeGenerator\Altkom.DotNetCore.FakeGenerator.csproj", "{12489BA2-635F-40B3-AB6C-A6D0C0DD547E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Altkom.DotNetCore.FakeGenerator", "Altkom.DotNetCore.FakeGenerator\Altkom.DotNetCore.FakeGenerator.csproj", "{12489BA2-635F-40B3-AB6C-A6D0C0DD547E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.DotNetCore.ConsoleClient", "Altkom.DotNetCore.201810.ConsoleClient\Altkom.DotNetCore.ConsoleClient.csproj", "{004D16B6-33CC-43A5-9033-4EBD29C86B2A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{12489BA2-635F-40B3-AB6C-A6D0C0DD547E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12489BA2-635F-40B3-AB6C-A6D0C0DD547E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12489BA2-635F-40B3-AB6C-A6D0C0DD547E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{004D16B6-33CC-43A5-9033-4EBD29C86B2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{004D16B6-33CC-43A5-9033-4EBD29C86B2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{004D16B6-33CC-43A5-9033-4EBD29C86B2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{004D16B6-33CC-43A5-9033-4EBD29C86B2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

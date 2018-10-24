@@ -20,17 +20,17 @@ namespace Altkom.DotNetCore.Service.Controllers
         }
 
         [HttpGet]
-        public ActionResult Get()
+        public async Task<ActionResult> Get()
         {
-            var products = productsService.Get();
+            var products = await productsService.GetAsync();
 
             return Ok(products);
         }
 
         [HttpGet("{id}")]
-        public ActionResult Get(int id)
+        public async Task<ActionResult> Get(int id)
         {
-            var product = productsService.Get(id);
+            var product = await productsService.GetAsync(id);
 
             if (product == null)
                 return NotFound();
@@ -39,9 +39,9 @@ namespace Altkom.DotNetCore.Service.Controllers
         }
 
         [HttpPost]
-        public ActionResult Post(Product product)
+        public async Task<ActionResult> Post(Product product)
         {
-            productsService.Add(product);
+            await productsService.AddAsync(product);
 
             // zła praktyka
             // return Created($"http://localhost:5000/api/products/{product.Id}", product);
@@ -50,20 +50,20 @@ namespace Altkom.DotNetCore.Service.Controllers
         }
 
         [HttpDelete("{id}")]
-        public ActionResult Delete(int id)
+        public async Task<ActionResult> Delete(int id)
         {
-            productsService.Remove(id);
+            await productsService.RemoveAsync(id);
 
             return Ok();
         }
 
         [HttpPut("{id}")]
-        public ActionResult Put(int id, Product product)
+        public async Task<ActionResult> Put(int id, Product product)
         {
             if (id != product.Id)
                 return BadRequest();
 
-            productsService.Update(product);
+            await productsService.UpdateAsync(product);
 
             return Ok();
         }

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Altkom.DotNetCore.IServices
 {
@@ -10,6 +11,12 @@ namespace Altkom.DotNetCore.IServices
         void Add(TEntity entity);
         void Update(TEntity entity);
         void Remove(int id);
+
+        Task<IList<TEntity>> GetAsync();
+        Task<TEntity> GetAsync(int id);
+        Task AddAsync(TEntity entity);
+        Task UpdateAsync(TEntity entity);
+        Task RemoveAsync(int id);
     }
 
 }

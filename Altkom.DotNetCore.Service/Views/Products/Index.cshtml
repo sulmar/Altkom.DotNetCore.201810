@@ -1,0 +1,15 @@
+﻿@model IList<Altkom.DotNetCore.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+
+@foreach(var product in Model)
+{
+    <h3>@product.Name</h3>
+}
+
+

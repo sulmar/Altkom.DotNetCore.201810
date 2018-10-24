@@ -10,13 +10,21 @@ namespace Altkom.DotNetCore.Service.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class ProductsController : ControllerBase
+    public class ProductsController : Controller
     {
         private readonly IProductsService productsService;
 
         public ProductsController(IProductsService productsService)
         {
             this.productsService = productsService;
+        }
+
+        [Route("/products")]
+        public async Task<ActionResult> Index()
+        {
+            var products = await productsService.GetAsync();
+
+            return View(products);
         }
 
         [HttpGet]
